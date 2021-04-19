@@ -18,6 +18,7 @@ const TransactionCard = ({ details, move, deleteTransaction }) => {
             onLongPress={() => toogleDelete()}
         >
             <Card.Title
+                titleStyle={{ fontSize: 18 }}
                 title={details.createdAt.toDate().toString().substr(0, 21)}
             />
             <Card.Content

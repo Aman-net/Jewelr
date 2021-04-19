@@ -136,7 +136,7 @@ const HomeTab = ({ navigation }) => {
                             style={[
                                 styles.textWhite,
                                 {
-                                    fontSize: 22,
+                                    fontSize: 18,
                                     fontWeight: "700",
                                 },
                             ]}
@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
     },
     transCard: {
         width: 160,
-        height: 200,
+        height: 180,
         backgroundColor: "white",
         margin: 8,
         elevation: 8,
@@ -281,11 +281,11 @@ const TransCard = ({ item }) => {
                     marginTop: 12,
                 }}
             >
-                <Text>Total Weight</Text>
+                <Text style={{ fontSize: 12 }}>Total Weight</Text>
                 <Text
                     style={{
                         alignSelf: "center",
-                        fontSize: 20,
+                        fontSize: 18,
                     }}
                 >
                     {item.tFine}
@@ -293,8 +293,8 @@ const TransCard = ({ item }) => {
             </View>
 
             <View style={{ justifyContent: "center", alignItems: "center" }}>
-                <Text>Total Labour</Text>
-                <Text style={{ alignSelf: "center", fontSize: 20 }}>
+                <Text style={{ fontSize: 12 }}>Total Labour</Text>
+                <Text style={{ alignSelf: "center", fontSize: 18 }}>
                     {item.tLabour}
                 </Text>
             </View>

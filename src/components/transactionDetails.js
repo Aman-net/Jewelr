@@ -40,7 +40,7 @@ const TransactionDetails = ({ navigation, route }) => {
                         style={{
                             color: "#fff",
                             marginLeft: 24,
-                            fontSize: 18,
+                            fontSize: 16,
                         }}
                     >
                         {details.createdAt.toDate().toString().substr(0, 21)}
@@ -55,7 +55,7 @@ const TransactionDetails = ({ navigation, route }) => {
                 >
                     <IconButton
                         icon="share-variant"
-                        size={32}
+                        size={28}
                         color="#14213d"
                         onPress={() => handleShare()}
                     />
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
         margin: 12,
     },
     finedata: {
-        fontSize: 32,
+        fontSize: 28,
         fontWeight: "bold",
     },
     line: {

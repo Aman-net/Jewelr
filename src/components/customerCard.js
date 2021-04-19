@@ -44,15 +44,15 @@ const CustomerCard = ({ movetodetails, value, disableCustomer }) => {
                         alignItems: "center",
                     }}
                 >
-                    <Text>Fine Silver</Text>
+                    <Text style={{ fontSize: 12 }}>Fine Silver</Text>
                     <Title>{Math.round(value.fineWeight).toString()}</Title>
                 </View>
                 <View style={{ flex: 1, alignItems: "center" }}>
-                    <Text>Cash</Text>
+                    <Text style={{ fontSize: 12 }}>Cash</Text>
                     <Title>{value.cash}</Title>
                 </View>
                 <View style={{ flex: 1, alignItems: "center" }}>
-                    <Text>Labour</Text>
+                    <Text style={{ fontSize: 12 }}>Labour</Text>
                     <Title>{value.labour}</Title>
                 </View>
             </Card.Content>

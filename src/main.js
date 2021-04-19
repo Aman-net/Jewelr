@@ -18,7 +18,7 @@ export default function Main() {
     useEffect(() => {
         const usersRef = firebase.firestore().collection("users")
         firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
+            if (user != null) {
                 usersRef
                     .doc(user.uid)
                     .get()

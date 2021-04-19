@@ -1,9 +1,7 @@
 import React from "react"
-import { View, Text } from "react-native"
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs"
 import HomeTab from "./tabscreens/homeTab"
 import CustomersTab from "./tabscreens/customersTab"
-import ItemsTab from "./tabscreens/itemsTab"
 import HelpTab from "./tabscreens/helpTab"
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 
@@ -46,19 +44,6 @@ const Tabs = ({ navigation }) => {
                     ),
                 }}
             />
-            {/* <Tab.Screen
-                name="Items"
-                component={ItemsTab}
-                options={{
-                    tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons
-                            name="bag-personal"
-                            color={color}
-                            size={26}
-                        />
-                    ),
-                }}
-            /> */}
             <Tab.Screen
                 name="Menu"
                 component={HelpTab}

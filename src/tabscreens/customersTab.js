@@ -1,5 +1,4 @@
 import React from "react"
-import { View, Text } from "react-native"
 import { createStackNavigator } from "@react-navigation/stack"
 import customerHome from "../components/customerHome"
 import CustomerDetails from "../components/customerDetails"
@@ -36,7 +35,11 @@ const CustomersTab = () => {
                 name="Transaction Details"
                 component={TransactionDetails}
             />
-            <customerStack.Screen name="Bill" component={NewBill} />
+            <customerStack.Screen
+                name="Bill"
+                options={{ header: () => null }}
+                component={NewBill}
+            />
         </customerStack.Navigator>
     )
 }

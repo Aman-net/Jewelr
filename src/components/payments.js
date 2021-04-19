@@ -263,6 +263,7 @@ const PaymentCard = ({ pinfo, deletePayment }) => {
     return (
         <Card onLongPress={() => toogleDelete()} style={styles.card}>
             <Card.Title
+                titleStyle={{ fontSize: 18 }}
                 title={pinfo.createdAt.toDate().toString().substr(0, 21)}
             />
             <Card.Content style={{ paddingBottom: 8 }}>

@@ -22,7 +22,7 @@ const HelpTab = () => {
                     setUrl(url)
                 })
         }
-    }, [])
+    }, [url])
 
     const logoutpress = () => {
         firebase
@@ -39,13 +39,17 @@ const HelpTab = () => {
             mediaTypes: ImagePicker.MediaTypeOptions.Images,
             allowsEditing: true,
             aspect: [1, 1],
-            quality: 0.8,
+            quality: 0.2,
         })
 
         if (result) {
             if (result.cancelled) {
                 alert("no image selected.")
             } else {
+                // console.log(result)
+                // const response = await fetch(result.uri)
+                // const blob = await response.blob()
+                // console.log("blob size =", blob.size)
                 const storage = firebase.storage()
                 let filename = result.uri.substring(
                     result.uri.lastIndexOf("/") + 1

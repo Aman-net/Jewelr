@@ -119,15 +119,26 @@ const NewBill = ({ navigation, route }) => {
                     <View
                         style={{
                             padding: 16,
+                            paddingLeft: 0,
                             backgroundColor: "#fca311",
                             borderBottomEndRadius: 24,
                             borderBottomStartRadius: 24,
+                            flexDirection: "row",
                         }}
                     >
-                        <Text style={{ fontSize: 24, fontWeight: "700" }}>
-                            {customer.name}
-                        </Text>
-                        <Text>Select payments to include in the bill</Text>
+                        <View>
+                            <IconButton
+                                icon="arrow-left"
+                                size={32}
+                                onPress={() => navigation.goBack()}
+                            />
+                        </View>
+                        <View>
+                            <Text style={{ fontSize: 22, fontWeight: "700" }}>
+                                {customer.name}
+                            </Text>
+                            <Text>Select payments to include in the bill</Text>
+                        </View>
                     </View>
 
                     <ScrollView fadingEdgeLength={16} style={{ flex: 2 }}>
@@ -521,6 +532,7 @@ const PaymentCard = ({ pinfo, handleSelect }) => {
             ]}
         >
             <Card.Title
+                titleStyle={{ fontSize: 18 }}
                 title={pinfo.createdAt.toDate().toString().substr(0, 21)}
             />
             <Card.Content style={{ paddingBottom: 8 }}>
